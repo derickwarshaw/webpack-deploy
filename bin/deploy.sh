@@ -93,10 +93,10 @@ gulp_config rollbar-source-map --env=$ENV --rev=$COMMIT_ROLLBAR
 
 gulp_config deploy-redis --env=$ENV --rev=$COMMIT --branch=$BRANCH
 
-gulp_config git-deploy-tag --env=$ENV --rev=$REV
+# gulp_config git-deploy-tag --env=$ENV --rev=$REV
 
-[ "$ENV" != "development" ] && \
-gulp_config slack-notify --env=$ENV --rev=$REV
+# [ "$ENV" != "development" ] && \
+# gulp_config slack-notify --env=$ENV --rev=$REV
 
 echo "\nDeploy into $ENV environment took ${SECONDS}s.\n"
 
